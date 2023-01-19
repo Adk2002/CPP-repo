@@ -19,6 +19,7 @@ int main()
     //     }
     // }
 
+    //another way
     for(int q =0; q <= wum-1; q=q+2)
     {
         cout<<arr[q]<<" ";
