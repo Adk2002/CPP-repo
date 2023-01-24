@@ -17,7 +17,7 @@ int main()
 
     return 0;
 }
-int reverse_array(int arr[], int n)
+int reverse_array(int arr[], int n) //function
 {
   
     for (int i = n; i >= 0; i--)

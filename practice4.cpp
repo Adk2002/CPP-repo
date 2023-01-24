@@ -1,22 +1,18 @@
 #include <iostream>
-using namespace std;
+using namespace std; //finding the GCD using Euclid's method
+int gcd(int a, int b)
+{
+    while (b != 0)
+    {
+        int rem = a % b;
+        a = b;
+        b = rem;
+    }
+    return a;
+}
 int main()
 {
-    char line[10], alpha[10];
-    int j = 0;
-    cout << "\nEnter string: ";
-    cin.getline(line, 100);
-
-    for (int i = 0; line[i] != '\0'; i++)
-    {
-        if ((line[i] >= 'a' && line[i] <= 'z') ||
-            (line[i] >= 'A' && line[i] <= 'Z'))
-        {
-            alpha[j++] = line[i];
-        }
-    }
-    alpha[j] = '\0';
-
-    cout << "Output String: " << alpha;
+    int a = 42, b = 24; 
+    cout << gcd(a, b);
     return 0;
 }
