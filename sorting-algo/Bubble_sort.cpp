@@ -1,34 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
     /*Bubble sorting algorithm
-    Repeatedly swaping of adjacent elements 
+    Repeatedly swaping of adjacent elements
     if they are in the wrong order */
-    int user;
-    cout<<"\nEnter number: ";
-    cin>>user;
-    int arr[user], elem;
-    cout<<"Enter elements\n";
-    for(int i = 0; i<user; i++)
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+
+    int arr[num];
+    cout << "\nEnter unsorted array"<<endl;
+    for (int i = 0; i < num; i++)
     {
-        cin>>arr[elem];
+        cin >> arr[i];
     }
-    
-    int counter = 1,temp;
-    while(counter < user)
+    // the main bubble logic start
+    int counter = 1;
+    while (counter < num)
     {
-        for(int j = 0; j< user-counter; j++)
+        for (int i = 0; i < num - counter; i++)
         {
-            if(arr[j]>arr[j+1])
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+            if (arr[i] > arr[i + 1]) // checking if left array > right array then swap
+            {
+                swap(arr[i + 1], arr[i]);
+            }
         }
         counter++;
     }
-    for(int q = 0; q<= user; q++)
-        cout<<arr[q]<<" "<<endl;
 
-return 0;
+    // this loop is to print the sorted array
+    for (int n = 0; n < num; n++)
+    {
+        cout <<"Sorted\n"<< arr[n] << " ";
+    }
+    return 0;
 }
