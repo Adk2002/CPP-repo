@@ -1,15 +1,23 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
 int main()
 {
-    //armstrong number --> 153 --> (1*1*1) + (5*5*5) + (3*3*3) = 153
-    int qum;
-    cout<<"Enter the number: ";
-    cin>>qum;
-    for(int i = 0; i<=qum; i++)
-    {
-        
-    }
+    int sum = 0, remainder, originalNum, number;
+    cout << "\nEnter number: ";
+    cin >> number;
+    originalNum = number;
 
-return 0;
+    while (originalNum != 0)
+    {
+        remainder = originalNum % 10;
+        sum += pow(remainder, 3);
+        originalNum /= 10;
+    }
+    if (sum == number)
+        cout << "\nIt is armstrong number.";
+    else
+        cout << "\nIt is not";
+
+    return 0;
 }
