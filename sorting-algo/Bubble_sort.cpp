@@ -10,7 +10,7 @@ int main()
     cin >> num;
 
     int arr[num];
-    cout << "\nEnter unsorted array"<<endl;
+    cout << "\nEnter unsorted array \n";
     for (int i = 0; i < num; i++)
     {
         cin >> arr[i];
