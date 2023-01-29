@@ -17,7 +17,5 @@ int main()
     }
     if (count > 1)
         cout << "\n" << num << " is not prime.";
-    else
-        cout << "\n"<< num << " is prime.";
     return 0;
 }
